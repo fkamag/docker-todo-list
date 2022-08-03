@@ -1,6 +1,6 @@
 FROM node:14-alpine AS todobackend
-EXPOSE 3001
-WORKDIR /docker/todo-app/back-end
-ADD node_modules.tar.gz /docker/todo-app/back-end
+EXPOSE 8080
+WORKDIR /todo-app/back-end
+ADD node_modules.tar.gz /todo-app/back-end
 COPY . .
 CMD ["npm", "start"]
